@@ -1,0 +1,249 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
+	text-decoration: none;
+}
+del {
+	text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+
+body
+{
+	background-color:#FFF;
+	font-family:Verdana, Geneva, sans-serif;
+	color:#000;
+	font-size:14px;
+}
+
+#wrapper
+{
+	width:960px;
+	margin:0px auto;
+}
+
+#top-nav
+{
+	background-image:url(images/top-nav-bg.png);
+	background-position:right;
+	background-repeat:no-repeat;
+	height:30px;
+	width:380px;
+	margin-left:581px;
+}
+
+
+
+#top-nav ul
+{
+	list-style:none;
+	text-align:right;
+}
+#top-nav ul li
+{
+	float:left;
+	padding-left:10px;
+	
+}
+
+#top-nav ul li a
+{
+	color:#000;
+	text-decoration:none;	
+}
+
+.input-box-border
+
+{
+	border:none;
+    background-image:url(images/search-box.png);
+	background-repeat:no-repeat;
+	height:25px;
+	width:210px;
+	
+}
+
+#logo
+{
+	background-image:url(images/logo.png);
+	background-position:left;
+	background-repeat:no-repeat;
+	width:238px;
+	height:90px;
+}
+
+#post-button
+{
+	width:126px;
+	height:29px;
+	background-image:url(images/post-button-bg.png);
+	background-repeat:no-repeat;
+	float:right;
+	margin-top:30px;
+}
+
+#content
+{
+	background-color:#999;
+	width:960px;
+}
+
+#listing
+{
+	width:738px;
+	float:left;
+}
+
+#about-box
+{
+	width:222px;
+	float:right;
+	background-color:#6bb0eb;
+	height:198px;
+}
+
+#about-box h2
+{
+	font-family:"Century Gothic" ,Georgia, "Times New Roman", Times, serif ;
+	font-size:18px;
+	color:#b74f8f;
+}
+
+.padding
+{
+	padding:12px;
+}
+#main-nav
+{
+	height:37px;
+	padding-left:373px;
+	padding-top:15px;
+	border-bottom:1px solid #000;
+	
+	
+}
+
+
+#main-nav ul
+{
+	list-style:none;
+	
+}
+
+
+#main-nav ul li
+{
+	float:left;
+	
+	padding-left:10px;
+	width:66px;
+	
+}
+
+#main-nav  li.selected
+{
+	
+	border-style:solid;
+	border-width:1px;
+	border-color:#000  #000  #fff ; 
+	width:66px;
+	padding:10px  20px ;
+		
+}
+#main-nav  li a
+{
+text-decoration:none;
+color:#000;
+font-size:15px;
+}
+
+#main-nav  li a:hover
+{
+    text-decoration:none;
+	color:#b74f8f;
+	font-size:15px;
+}
+
+.blog
+{
+	width:373px;
+	height:49px;
+	float:left;
+}
+
+.serial
+{
+	font-size:15px;
+	float:left;
+	margin-top:29px;
+	
+}
+
+.favorite-views
+{
+	width:97px;
+	background-image:url(images/heart-image.png);
+	background-repeat:no-repeat;
+	background-position:bottom;
+	height:49px;
+	width:34px;
+	font-size:22px;
+	float:left;
+	color:#969594;
+	
+}
+
+
+.view
+{
+
+	
+}

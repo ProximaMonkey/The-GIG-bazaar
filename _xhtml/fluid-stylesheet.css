@@ -1,0 +1,51 @@
+#wrapper
+{
+	width:95%;
+}
+
+#header-wrapper{
+	width: 100%;
+}
+
+#content{
+	width:100%;
+}
+
+#banner{
+	margin:0px auto;
+}
+
+#about-box{
+	margin-top:20px;
+}
+
+#listing{
+	width:80%;
+}
+
+.blog {
+	width:100%;
+}
+
+.clearleft{
+	clear:left;
+	height:0;
+}
+
+#tag{
+	width:100%;
+}
+
+#tag{
+	margin-top:0px;
+	float:none;
+}
+
+.by{
+	margin:0px;
+}
+
+.listing-title {
+	margin-top:10px;
+}
+
