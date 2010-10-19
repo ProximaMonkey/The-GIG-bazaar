@@ -11,8 +11,8 @@
 <div id="main-content">
 	<div id="user_layout">
 	<div id="user_image">
-			<?php if($user['facebook'] == "") {?>			
-			<img src="<?php echo base_url();?>/assets/timthumb.php?src=<?php echo base_url();?>user_avatar/<?php echo $user['member_picture'];?>&h=56&w=56&zc=1">  
+			<?php if($user['facebook'] == "") {?>
+			<img src="<?php echo base_url();?>/assets/timthumb.php?src=<?php echo base_url();?>/user_avatar/<?php echo $user['member_picture'];?>&h=56&w=56&zc=1"> 
 			<?php }
 			else {
 			?>

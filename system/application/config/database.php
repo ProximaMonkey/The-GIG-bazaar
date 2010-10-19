@@ -38,9 +38,9 @@ $active_group = "default";
 $active_record = TRUE;
 
 $db['default']['hostname'] = "localhost";
-$db['default']['username'] = "pranayni_gigbaza";
-$db['default']['password'] = "aCZWhUu?Ev!E";
-$db['default']['database'] = "pranayni_gigbazaar";
+$db['default']['username'] = "root";
+$db['default']['password'] = "root";
+$db['default']['database'] = "fiverr";
 $db['default']['dbdriver'] = "mysql";
 $db['default']['dbprefix'] = "";
 $db['default']['pconnect'] = TRUE;

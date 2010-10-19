@@ -19,6 +19,7 @@ class Member extends Controller {
 		//check the login details are correct
 		$username = $this->input->post('username');
 		$password = $this->input->post('password');
+		$ref = $this->input->post('ref');
 		
 		//Check if the username and password exists 
 		$this->db->where('member_username',$username);
@@ -51,10 +52,15 @@ class Member extends Controller {
 											  );
 
 		      $this->session->set_userdata($data);
-					$referrer = $_SERVER['HTTP_REFERER'];
-			
+					if($ref == site_url('main/login'))
+					{
 						redirect('main/index');
-					
+					}
+					else {
+						redirect($ref);
+					}
+			
+						
 			}
 			else {
 				if($banned == 'n')

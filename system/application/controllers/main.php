@@ -51,6 +51,7 @@ class Main extends Controller {
 		{
 			redirect('main/index');
 		}
+		$data['referrer'] = $_SERVER['HTTP_REFERER'];
 		$data['title'] = "TheGigBazaar | Login";
 		$data['error'] = "";
 		$data['category'] = $this->Common_model->get_categories();

@@ -111,7 +111,7 @@
 			<?php }
 			else {
 	
-				echo "<li><a href='".site_url('member/inbox')."'>Inbox <span id='unread'>".$unread."</span></a>";
+				echo "<li><a href='".site_url('member/inbox')."'>Inbox <span id='unread'>(".$unread.")</span></a>";
 				if($this->session->userdata('level') == '2') // Means that the user is a seller
 				{
 				echo "</li><li> <a href='".site_url('/member/ordered')."'>Your Orders</a></li>";
