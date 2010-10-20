@@ -131,8 +131,8 @@ Your Order ID is : ".$orderid."
 			Your Order ID is : '.$orderid.'
 			
 			<br><br>Thanks,<br><br><b>If you have any queries regarding the email, please email us at <a href=mailto:support@thegigbazzar.com>support@thegigbazzar.com</a>'); */
-			
-			$this->email->send($main_content);
+			$this->email->message($mail_content);
+			$this->email->send();
 			
 			
 			//Get the persons email address who is providing the service
@@ -146,7 +146,35 @@ Your Order ID is : ".$orderid."
 			$this->email->to($email_to);
 
 			$this->email->subject('You have a new order: thegigbazzar.com');
-			$this->email->message('Hi '.$user_to['name'].'<br><br> We have received a new order for you for your gig.'.$title.'Please login and confirm the order.<br><br>Thanks,<br><br><b>If you have any queries regarding the email, please email us at <a href=mailto:support@thegigbazzar.com>support@thegigbazzar.com</a>');
+			$mail_content="<table cellspacing='0' cellpadding='0' align='center' width='666' style='font-size: 14px;'>
+    <tr>
+        <td height='18' width='666' bgcolor='#ffffff' background='".site_url('images/newsletter/top_shadow.png')."' style='width:666px;background-repeat:no-repeat;background-position:top;height:18px;'>&nbsp;</td>
+    </tr>
+    <tr>
+        <td background='".site_url('images/newsletter/middle_shadow.png')."' style='background-repeat:repeat-y; width:666px; height:370px;' height='371'>
+        <table cellspacing='0' cellpadding='0' align='center'  width='638'>
+     		<tr>
+				<td height='104' width='500' background='".site_url('images/newsletter/top_bg.png')."' style='height:109px; background-repeat:repeat-x;'>   
+     				 <img src='".site_url('images/logo.png')."' width='198' height='76' alt='logo' align='left' style='padding-left:15px;' />  
+				</td>  
+			</tr>
+			<tr>
+				<td style='padding:15px;'>
+					<font face='Lucida Grande, Segoe UI, Arial, Verdana, Lucida Sans Unicode, Tahoma, Sans Serif' color='#333'>
+						Hi ,<br><br>
+We have received a new order for you for your gig-".$title.". Please login and confirm the order.<br><br>Thanks,<br><br><b>If you have any queries regarding the email, please email us at <a href='mailto:support@thegigbazzar.com'>support@thegigbazzar.com</a>
+					</font>
+        		</td>
+        	</tr>
+        </table>
+		</td>
+    </tr>
+    <tr>
+		<td height='10' bgcolor='#ffffff' background='".site_url('images/newsletter/bottom_shadow.png')."' style='background-repeat:no-repeat; background-position:bottom; height:17px;'>&nbsp;</td>
+	</tr>
+</table>";
+			/*$this->email->message('Hi '.$user_to['name'].'<br><br> We have received a new order for you for your gig.'.$title.'Please login and confirm the order.<br><br>Thanks,<br><br><b>If you have any queries regarding the email, please email us at <a href=mailto:support@thegigbazzar.com>support@thegigbazzar.com</a>');*/
+			$this->email->message($mail_content);
 			$this->email->send();
 			
 			//Now send a message to this through private message
