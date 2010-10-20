@@ -67,7 +67,7 @@ class Main_model extends Model {
 			<tr>
 				<td style='padding:15px;'>
 					<font face='Lucida Grande, Segoe UI, Arial, Verdana, Lucida Sans Unicode, Tahoma, Sans Serif' color='#333'>
-						Hi Satya,<br><br>
+						Hi ".$username.",<br><br>
 Please verify your email address by clicking on the link below.<br>
 <a href='".site_url('member/verify/'.$uniqueid)."'>Click here</a>
 <br>The Gig bazaar Team<br><br><b>If you have any queries regarding the email, please email us at <a href=mailto:support@thegigbazaar.com>support@thegigbazaar.com</a>
