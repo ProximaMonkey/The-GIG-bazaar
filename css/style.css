@@ -328,18 +328,21 @@ h2
 	border-style:solid;
 	border-width:1px;
 	border-color:#000  #000  #fff ; 
-	padding-right:20px;
-	height:36px;text-align:center;
+	/*padding-right:20px;*/
+	/*height:36px;*/
+	text-align:center;
 	background-color:#ccc;		
 }
 
 #main-nav  li a
 {
-text-decoration:none;
-color:#000;
-font-size:15px;
-padding-left:15px;
-line-height:36px;
+	text-decoration:none;
+	color:#000;
+	font-size:15px;
+	/*padding-left:15px;
+	line-height:36px;*/
+	display:block;
+	padding:10px 20px 11px;
 }
 
 #main-nav  li a:hover
