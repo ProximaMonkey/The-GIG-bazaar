@@ -363,6 +363,39 @@ class Main extends Controller {
 
 			$this->load->view('fbtest', $data);
 	}
+	function dbbackup()
+	{
+		// Load the DB utility class
+		$this->load->dbutil();
+
+		// Backup your entire database and assign it to a variable
+		$backup =& $this->dbutil->backup(); 
+		// Load the file helper and write the file to your server
+		$this->load->helper('file');
+		$date = date('Ymd');
+		write_file('../backup/thegigbazaar'.$date.'.zip', $backup); 
+		// Load the download helper and send the file to your desktop
+		//$this->load->helper('download');
+		//force_download('multitude'.$date.'.zip', $backup);
+		$this->load->library('email');
+		$config['mailtype'] = "html";		
+		$this->email->initialize($config);
+		
+		
+		$this->email->from('admin@thegigbazaar.com', 'Multitude Backup');
+		$this->email->to('h.sanat@live.com');
+		$this->email->cc('cybersunil03@hotmail.com');
+		$date1 = date('Y-m-d');
+		$this->email->subject('Thegigbazaar Backup');
+			$this->email->attach('../backup/thegigbazaar'.$date.'.zip');	
+		$this->email->message('Backup for Date '.$date1);	
+		
+		$this->email->send();
+		//Now delete the file
+		//unlink('../backup/multitude'.$date.'.zip');
+		echo $this->email->print_debugger();
+		
+	}
 	
 }
 

@@ -30,7 +30,7 @@
 <ul>
 	<script src="http://static.ak.connect.facebook.com/js/api_lib/v0.4/FeatureLoader.js.php" type="text/javascript"></script>
 
-	<?php if ( !$fbdata['user']['uid'] ):
+	<?php if ( !$fbdata['user']['user_id'] ):
 	if($this->session->userdata('logged_in') != TRUE)
 	{ ?>
 		<fb:login-button onlogin="window.location='<?=current_url()?>'"></fb:login-button>
