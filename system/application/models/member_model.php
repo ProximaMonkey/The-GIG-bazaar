@@ -112,7 +112,7 @@ class Member_model extends Model {
 				
 					$foryou .= '<div class=single_order>
 									<div class=order_date>
-						Date:<br/> '.$gigs->order_date.'</div>
+									'.$gigs->order_date.'</div>
 						<div class=order_title><a href='.site_url('gig/single/'.$gigs->gigid).' class=listing-title>'.$title.' </a></div>
 						<div class=order_status>'.$status.'</div>
 						<div class="order_actions">';
@@ -124,10 +124,10 @@ class Member_model extends Model {
 						{
 							$foryou .= "<b style='color:red'>Gig Rejected on: </b>".$gigs->order_accept_date;
 						}
-							if($order_status == '2')
-							{
-								$foryou .= "<b style='color:green'>Gig marked as completed on: </b>".$gigs->order_delivered_date;
-							}
+						if($order_status == '2')
+						{
+							$foryou .= "<b style='color:green'>Gig marked as completed on: </b>".$gigs->order_delivered_date;
+						}
 						
 						if($order_status == "0"){
 							$foryou .= '<a href="'.site_url('gig/acceptorder/'.$gigs->orderid).'">Accept this order</a> | <a href="'.site_url('gig/rejectorder/'.$gigs->orderid).'">Reject this order</a>';

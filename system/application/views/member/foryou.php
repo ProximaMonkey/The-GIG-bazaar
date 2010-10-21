@@ -19,6 +19,12 @@
              
 				<?php echo $this->session->flashdata('message'); ?>
 				<h1 class="page_title">Gigs for you</h1>
+            <div class="single_order_header">
+            	<div class="order_date">Date</div>
+                <div class="order_title">Date</div>
+                <div class="order_status">Date</div>
+                <div style="clear:left"></div>
+            </div>
 			<?php echo $foryou;?>
   
 </div><!--listing ends-->

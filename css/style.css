@@ -842,19 +842,19 @@ margin-bottom:20px;
 	}
 	
 	.single_order {
-		width:500px;border-bottom:2px solid #000;padding-bottom:5px;height: 164px;
+		/*width:500px;*/border-bottom:2px solid #000;padding-bottom:5px;height: 164px;
 	}
 	.order_date {
-		width:100px;float:left;
+		width:15%;float:left;
 	}
 	.order_title {
-	float:left;	width:170px;
+		float:left;	width:30%;
 	}
 	.order_status {
-		float:left;width:200px;
+		float:left;width:30%;
 	}
 	.order_actions {
-	clear:both;font-size:11px;
+		clear:left;font-size:11px;
 	}
 	#single_message{
 	width:600px;padding-top:10px;clear:both;	
