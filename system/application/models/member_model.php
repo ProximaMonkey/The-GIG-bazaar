@@ -85,7 +85,13 @@ class Member_model extends Model {
 			$this->db->where('order_for',$id);
 			$query = $this->db->get('orders');
 			$num = $query->num_rows();		
-			$foryou .= "<br/><br/><b>You have a total of ".$num." orders</b><br/><br/>";
+			$foryou .= "<br/><br/><b>You have a total of ".$num." orders</b><br/><br/><div class='single_order_header'>
+									<div class='order_date'>Date</div>
+									<div class='order_title'>Gig Title</div>
+									<div class='order_status'>Order Status</div>
+									<div style='clear:left'></div>
+								</div>
+								";
 
 			foreach($query->result() as $gigs)
 			{
@@ -112,7 +118,7 @@ class Member_model extends Model {
 				
 					$foryou .= '<div class=single_order>
 									<div class=order_date>
-						Date:<br/> '.$gigs->order_date.'</div>
+									'.$gigs->order_date.'</div>
 						<div class=order_title><a href='.site_url('gig/single/'.$gigs->gigid).' class=listing-title>'.$title.' </a></div>
 						<div class=order_status>'.$status.'</div>
 						<div class="order_actions">';
@@ -124,10 +130,10 @@ class Member_model extends Model {
 						{
 							$foryou .= "<b style='color:red'>Gig Rejected on: </b>".$gigs->order_accept_date;
 						}
-							if($order_status == '2')
-							{
-								$foryou .= "<b style='color:green'>Gig marked as completed on: </b>".$gigs->order_delivered_date;
-							}
+						if($order_status == '2')
+						{
+							$foryou .= "<b style='color:green'>Gig marked as completed on: </b>".$gigs->order_delivered_date;
+						}
 						
 						if($order_status == "0"){
 							$foryou .= '<a href="'.site_url('gig/acceptorder/'.$gigs->orderid).'">Accept this order</a> | <a href="'.site_url('gig/rejectorder/'.$gigs->orderid).'">Reject this order</a>';
