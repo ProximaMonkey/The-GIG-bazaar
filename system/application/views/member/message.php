@@ -4,8 +4,11 @@
 	<h2>Read Message</h2>
 
 			<?php echo $this->session->flashdata('message'); ?>
-			<h1 class="page_title">Message</h1>
+
+            
 		<br/>
+        <h2 style='color:green'>subject : <?php echo $message['subject'];?></p></h2>
+        <br/>
 		<p><?php echo $message['message'];?></p>
 		<br/><br/>
 		<b>Replies:<br/>

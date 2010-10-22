@@ -178,9 +178,10 @@ We have received a new order for you for your gig-".$title.". Please login and c
 			$this->email->send();
 			
 			//Now send a message to this through private message
+			$subject = "You have a new order";
 			$message = "You have a new order for the gig ".$title." by member ".$email_logged['name'];
 			$date = date('Y-m-d');
-			$data_message = array('message_from'=>$this->session->userdata('id'),'message_to'=>$user_id,'message'=>$message,'message_sent'=>$date,'message_read'=>'0');
+			$data_message = array('message_from'=>$this->session->userdata('id'),'message_to'=>$user_id,'subject'=>$subject,'message'=>$message,'message_sent'=>$date,'message_read'=>'0');
 			$this->db->insert('messages',$data_message);			
 			
 			
@@ -546,8 +547,9 @@ We have received a new order for you for your gig-".$title.". Please login and c
 		$message = $this->input->post('firstmessage');		
 		
 		//Insert into message table
+		$subject = "Your order has been accepted";
 		$date = date('Y-m-d');
-		$data = array('message_from'=>$from,'message_to'=>$to,'message'=>$message,'message_sent'=>$date);
+		$data = array('message_from'=>$from,'message_to'=>$to,'subject'=>$subject,'message'=>$message,'message_sent'=>$date);
 		$this->db->insert('messages',$data);
 		//Send a email to the buyer
 		
@@ -591,11 +593,13 @@ We have received a new order for you for your gig-".$title.". Please login and c
 		//From is the logged in member
 		$from = $this->session->userdata('id');
 		$message = $this->input->post('firstmessage');		
+		$subject = "Your order has been rejected";
 		
 		//Insert into message table
-		//$date = date('Y-m-d');
-		//$data = array('message_from'=>$from,'message_to'=>$to,'message'=>$message,'message_sent'=>$date);
-		//$this->db->insert('messages',$data);
+		$date = date('Y-m-d');
+		$data = array('message_from'=>$from,'message_to'=>$to,'subject'=>$subject,'message'=>$message,'message_sent'=>$date);
+		$this->db->insert('messages',$data);
+		
 		//Send a email to the buyer
 		
 		$detail = $this->Gig_model->get_person_detail($gigid);
@@ -681,9 +685,10 @@ We have received a new order for you for your gig-".$title.". Please login and c
 		
 		
 		//Update the message table
+		$subject = "Order marked as completed";
 		$message = 'Your order for '.$gig_title." was marked completed";
 		$date = date('Y-m-d');
-		$data = array('message_from'=>'-1','message_to'=>$personid,'message'=>$message,'message_sent'=>$date);
+		$data = array('message_from'=>'-1','message_to'=>$personid,'subject'=>$subject,'message'=>$message,'message_sent'=>$date);
 		$this->db->insert('messages',$data);
 		
 		//Add this to the payment queue
