@@ -398,12 +398,13 @@ class Member_model extends Model {
 			{
 				$inbox .= "<div id='single_message'><div id='message_text'>";
 				$title = $this->get_member_detail($row->message_from);
+				$subject = $row->subject;
 				if($row->message_read == 0)
 				{
-					$inbox .= "<img src='".base_url()."/images/message.png' align='absmiddle' class='icon'><b><a href='".site_url('member/readmessage/'.$row->id)."'>".$title['member_name']."</a></b>";
+					$inbox .= "<img src='".base_url()."/images/message.png' align='absmiddle' class='icon'><b><a href='".site_url('member/readmessage/'.$row->id)."'>".$subject."</a></b>";
 				}
 				else {
-					$inbox .= "<img src='".base_url()."/images/message_read.png' align='absmiddle' class='icon'><a href='".site_url('member/readmessage/'.$row->id)."'>".$title['member_name']."</a>";
+					$inbox .= "<img src='".base_url()."/images/message_read.png' align='absmiddle' class='icon'><a href='".site_url('member/readmessage/'.$row->id)."'>".$subject."</a>";
 				}
 			
 				$inbox .= "</div><div id='message_date'>Sent on: $row->message_sent</div><div id='message_by'>Sent By:".$this->Common_model->convertname($row->message_from)."<span style='float:right'>Delete<input type='checkbox' value='$row->id' name='delete_inbox[]'></span></div></div>	";				
@@ -424,7 +425,7 @@ class Member_model extends Model {
 					$this->db->where('id',$id);
 					$query = $this->db->get('messages');
 					$row = $query->row();
-					
+					$message['subject'] = $row->subject;
 					$message['message'] = $row->message;
 					$message['message_sent'] = $row->message_sent;
 					if($row->message_from == '-1')

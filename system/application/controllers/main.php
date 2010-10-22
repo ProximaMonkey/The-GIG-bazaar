@@ -215,10 +215,11 @@ class Main extends Controller {
 		$from = $this->session->userdata('id');
 		$from_detail = $this->Common_model->get_member_info($to);
 		$from_name = $from_detail['name'];
-		$message = $this->input->post('contact');		
+		$message = $this->input->post('contact');
+		$subject = $this->input->post('subject');
 		
 			$date = date('Y-m-d');
-			$data = array('message_from'=>$from,'message_to'=>$to,'message'=>$message,'message_sent'=>$date,'message_reply_to'=>'new');
+			$data = array('message_from'=>$from,'message_to'=>$to,'subject'=>$subject,'message'=>$message,'message_sent'=>$date,'message_reply_to'=>'new');
 			$this->db->insert('messages',$data);
 		
 				$this->load->library('email');
