@@ -85,7 +85,13 @@ class Member_model extends Model {
 			$this->db->where('order_for',$id);
 			$query = $this->db->get('orders');
 			$num = $query->num_rows();		
-			$foryou .= "<br/><br/><b>You have a total of ".$num." orders</b><br/><br/>";
+			$foryou .= "<br/><br/><b>You have a total of ".$num." orders</b><br/><br/><div class='single_order_header'>
+									<div class='order_date'>Date</div>
+									<div class='order_title'>Gig Title</div>
+									<div class='order_status'>Order Status</div>
+									<div style='clear:left'></div>
+								</div>
+								";
 
 			foreach($query->result() as $gigs)
 			{
