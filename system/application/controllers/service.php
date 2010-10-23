@@ -6,7 +6,10 @@ class Service extends Controller {
 	{
 		parent::Controller();
 		$this->load->model('Service_model');
-		//$this->output->enable_profiler(TRUE);	
+				if($this->session->userdata('logged_in') != TRUE)
+				{
+					redirect('beta/');
+				}
 	}
 	
 	function index()

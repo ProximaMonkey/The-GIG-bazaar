@@ -371,6 +371,7 @@ class Gig_model extends Model {
 				$data['picture'] = $row1->member_picture;
 				$data['description'] = $row1->member_description;
 				$data['email'] = $row1->member_email;
+				$data['facebook'] = $row1->member_facebook;
 				
 				return $data;
 		}

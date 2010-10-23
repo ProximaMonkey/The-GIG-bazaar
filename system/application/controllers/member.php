@@ -7,10 +7,10 @@ class Member extends Controller {
 		parent::Controller();	
 		//$this->output->enable_profiler(TRUE);	
 		$this->load->model('Member_model');
-		if($this->session->userdata('logged_in') != TRUE)
-		{
-			redirect('member/logout');
-		}
+				if($this->session->userdata('logged_in') != TRUE)
+				{
+					redirect('beta/');
+				}
 	}
 	
 	function index()

@@ -61,6 +61,10 @@ background-color:#333;
 color:#fff;
 font-size:15px;
 }
+
+#error {
+	font-size:15px;color:red;
+}
 </style>
 </head>
 <body>
@@ -72,7 +76,7 @@ font-size:15px;
 <div id='message'>Welcome to the beta version of thegigbazaar.com. Our system is currently being tested by beta testers and should be available soon for public access.<br/><br/>
 	If you have a invite code, please enter it below.
 </div>
-<div id='message'>
+<div id='error'>
 <?php echo $this->session->flashdata('message');?>
 <div>
 <div id='form'>

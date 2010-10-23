@@ -7,10 +7,10 @@ class User extends Controller {
 			parent::Controller();				
 			$this->load->model('User_model');	
 			//$this->output->enable_profiler(TRUE);	
-			if($this->session->userdata('logged_in') != TRUE)
-			{
-				redirect('member/logout');
-			}
+					if($this->session->userdata('logged_in') != TRUE)
+					{
+						redirect('beta/');
+					}
 	}
 	
 	function index()

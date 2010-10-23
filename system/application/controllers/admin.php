@@ -9,7 +9,7 @@ class Admin extends Controller {
 		//$this->output->enable_profiler(TRUE);
 		if($this->session->userdata('logged_in') != TRUE and $this->session->userdata('level') != '-1')
 		{
-			redirect('member/logout');
+			redirect('beta/');
 		}
 		$this->load->model('Admin_model');
 

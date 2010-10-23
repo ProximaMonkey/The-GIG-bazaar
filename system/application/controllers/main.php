@@ -10,6 +10,10 @@ class Main extends Controller {
 					'user'		=> $this->facebook_connect->user,
 					'user_id'	=> $this->facebook_connect->user_id,
 			);
+				if($this->session->userdata('logged_in') != TRUE)
+				{
+					redirect('beta/');
+				}
 
 		//$this->output->enable_profiler(TRUE);	
 	}
