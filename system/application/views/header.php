@@ -14,7 +14,7 @@
 					<script type='text/javascript' src='<?php echo base_url();?>/js/jquery.js'></script>
 					<script type='text/javascript' src='<?php echo base_url();?>/js/gigbazaar.js'></script>
 					<script type="text/javascript" src='<?php echo base_url();?>/js/thickbox.js'></script>
-					<link href="thickbox.css" rel="stylesheet" type="text/css" />
+					<link href="thickbox.css" rel="stylesheet" type=	"text/css" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title><?php echo $title;?></title>
 </head>
@@ -30,10 +30,10 @@
 <ul>
 	<script src="http://static.ak.connect.facebook.com/js/api_lib/v0.4/FeatureLoader.js.php" type="text/javascript"></script>
 
-	<?php if ( !$fbdata['user']['user_id'] ):
+	<?php if ( !$fbdata['user']['uid'] ):
 	if($this->session->userdata('logged_in') != TRUE)
 	{ ?>
-		<fb:login-button onlogin="window.location='<?=current_url()?>'"></fb:login-button>
+		<fb:login-button onlogin="window.location='http://dev.thegigbazaar.com/index.php/main/fbtest'"></fb:login-button>
 	<?php
 	}
 	?>

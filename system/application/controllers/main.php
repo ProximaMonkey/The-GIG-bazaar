@@ -372,7 +372,7 @@ class Main extends Controller {
 		// Load the file helper and write the file to your server
 		$this->load->helper('file');
 		$date = date('Ymd');
-		write_file('../backup/thegigbazaar'.$date.'.zip', $backup); 
+		write_file('./backup/thegigbazaar'.$date.'.zip', $backup); 
 		// Load the download helper and send the file to your desktop
 		//$this->load->helper('download');
 		//force_download('multitude'.$date.'.zip', $backup);
@@ -381,7 +381,7 @@ class Main extends Controller {
 		$this->email->initialize($config);
 		
 		
-		$this->email->from('admin@thegigbazaar.com', 'Multitude Backup');
+		$this->email->from('admin@thegigbazaar.com', 'Thegigbazaar Backup');
 		$this->email->to('h.sanat@live.com');
 		$this->email->cc('cybersunil03@hotmail.com');
 		$date1 = date('Y-m-d');
