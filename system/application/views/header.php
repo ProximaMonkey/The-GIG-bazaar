@@ -40,14 +40,8 @@
 			else {
 	
 				echo "<li><a href='".site_url('member/inbox')."'>Inbox <span id='unread'>(".$unread.")</span></a>";
-				if($this->session->userdata('level') == '2') // Means that the user is a seller
-				{
 				echo "</li><li> <a href='".site_url('/member/ordered')."'>Your Orders</a></li>";
 				echo "</li><li> <a href='".site_url('member/gigs/')."'>Start Selling</a></li>";
-				}
-				else {
-					echo "";
-				}
 				echo "<li><a href='".site_url('member/settings/')."'>Settings</a></li> ";?>
 				<?php
 				if($this->session->userdata('level') == '-1')

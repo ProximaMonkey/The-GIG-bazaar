@@ -343,6 +343,9 @@ class Gig_model extends Model {
 				{
 					$data['facebook'] = $row1->member_facebook;
 				}
+				else {
+					$data['facebook'] = "";
+				}
 				$data['image'] = $row1->member_picture;
 				if($row1->member_description == "")
 				{
