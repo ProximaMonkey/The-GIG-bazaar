@@ -13,6 +13,7 @@
 */
 $config['base_url']	= "http://localhost:8888/gitgigbazaar/The-GIG-bazaar/";
 
+
 /*
 |--------------------------------------------------------------------------
 | Index File

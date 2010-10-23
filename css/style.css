@@ -854,22 +854,22 @@ margin-bottom:20px;
 	}
 	
 	.single_order {
-		width:500px;border-bottom:2px solid #000;padding-bottom:5px;height:46px;
+		/*width:500px;*/border-bottom:2px solid #000;padding-bottom:5px;/*height:46px;*/ padding:20px 0 20px 10px;
 	}
-	.order_date {
-		width:100px;float:left;
-	}
-	.order_title {
-	float:left;	width:170px;
-	}
-	.order_status {
-		float:left;width:200px;
-	}
-	.order_actions {
-	clear:both;font-size:11px;
-	}
+		.order_date {
+			width:15%;/*float:left;*/ display:inline-block;
+		}
+		.order_title {
+			/*float:left;	*/width:30%; display:inline-block;
+		}
+		.order_status {
+			/*float:left;*/width:30%; display:inline-block;
+		}
+		.order_actions {
+			/*clear:left;*/font-size:12px; display:inline-block;
+		}
 	#single_message{
-	width:600px;padding-top:10px;clear:both;	
+		width:600px;padding-top:10px;clear:both;	
 	}
 	#message_text{
 		width:200px;
@@ -925,3 +925,5 @@ margin-bottom:20px;
 	#date{font-weight:bold;}
 	
 #list {height:37px;border-bottom:1px solid #ddd;padding:5px;}
+
+.single_order_header{ padding:20px 0 20px 10px; display:block; background:#D2D2D2; font-weight:bold; }

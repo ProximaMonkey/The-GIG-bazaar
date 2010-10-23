@@ -36,7 +36,7 @@ define('FOPEN_READ_WRITE_CREATE', 				'a+b');
 define('FOPEN_WRITE_CREATE_STRICT', 			'xb');
 define('FOPEN_READ_WRITE_CREATE_STRICT',		'x+b');
 
-define('MINIMUM_BALANCE',		'500');
+define('MINIMUM_BALANCE',		'1000');
 define('CURRENCY','Rs');
 
 define('FACEBOOK_APP_ID', '141916839183446');

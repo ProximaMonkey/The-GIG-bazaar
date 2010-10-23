@@ -11,6 +11,7 @@
 					
 						<form method="post" action="<?php echo site_url('main/send_contact');?>" id="sendmessage">
 										<ul>
+                                        	<li><label>Subject</label><div><input  name="subject" id="subject" class="text medium"/></div></li>
 							<li><label>Message to seller</label><div><textarea name="contact" id="contact" class="textarea medium"></textarea></div></li>
 								<input type="hidden" name="id" value="<?php echo $id;?>">
 								<li><div><input type="submit" value="Send Message" name="submit" id="submit"></div> </li>
@@ -19,4 +20,5 @@
 			
 	</div><!-- Listing -->
 	
-		
+
+	

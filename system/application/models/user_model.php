@@ -37,7 +37,7 @@ class User_model extends Model {
 			
 			if($row->member_picture == "")
 			{
-				$data['member_picture'] = "default.png";
+				$data['member_picture'] = "logo.png";
 			}
 			else {
 				$data['member_picture'] = $row->member_picture;

@@ -6,6 +6,7 @@
 	<?php echo $this->session->flashdata('message'); ?>
 	<?php if($error != "") echo "<div class='form-error'>".$error."</div>";?>
 		<form method="post" action="<?php echo site_url('member/login');?>" id="newuser">
+			<input type='hidden' name='ref' value="<?php echo $referrer;?>">
 							<ul>
 				<li><label>Username</label><div><input type="text" name="username" id="username" class="text medium" value=""></div></li>
 						

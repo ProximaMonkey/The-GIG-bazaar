@@ -17,7 +17,7 @@ $('#paypal_form').submit();
 <div id="listing">
 		<h1 class="content_title">Order Gig - <?php echo $title;?> </h1><br/>
 	<b>You are being redirected to payment gateway</b>
-	<form action="https://sandbox.paypal.com/cgi-bin/webscr" id="paypal_form" method="post">
+	<form action="https://www.paypal.com/cgi-bin/webscr" id="paypal_form" method="post">
 		<input type='hidden' name='amount' value='<?php echo $final?>'>
 		<input type='hidden' name='item_name' value='<?php echo $title;?>'>
 		<input type='hidden' name='item_number' value='<?php echo $orderid;?>'>
