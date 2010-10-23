@@ -28,78 +28,6 @@
 
 <div class="left-align">
 <ul>
-	<script src="http://static.ak.connect.facebook.com/js/api_lib/v0.4/FeatureLoader.js.php" type="text/javascript"></script>
-
-	<?php if ( !$fbdata['user']['uid'] ):
-	if($this->session->userdata('logged_in') != TRUE)
-	{ ?>
-		<fb:login-button onlogin="window.location='http://dev.thegigbazaar.com/index.php/main/fbtest'"></fb:login-button>
-	<?php
-	}
-	?>
-	<?php else:
-	if($this->session->userdata('logged_in') != TRUE)
-	{
-	$user_check = $this->Common_model->checkuser($fbdata['user']['uid']);
-	if($user_check == 'exists')
-	{
-		$this->db->where('member_facebook',$fbdata['user']['uid']);
-		$q = $this->db->get('members');
-		$r = $q->row();
-		$data = array(
-	                 'username'  => $r->member_username,
-									 'logged_in'  => TRUE,
-										'id' => $r->id,
-										'level' => $r->level
-									  );
-			$this->session->set_userdata($data);
-			header('Location: http://dev.thegigbazaar.com');
-	}
-	else {
-		$url = site_url('index.php/main/signup');
-		redirect($url);
-	}
-	}
-	 ?>
-	
-	<?php endif; ?>
-	<script type="text/javascript">
-		FB.init("<?=$this->config->item('facebook_api_key')?>", "/xd_receiver.htm");
-	</script>
-	
-	<?php /*if ($cookie) { 
-			//Check if the user is registered in the system, if not then register him/her
-			$user_check = $this->Main_model->checkuser($cookie['email']);
-			$user = json_decode(file_get_contents(
-			    'https://graph.facebook.com/me?access_token=' .
-			    $cookie['access_token']))->id;
-					
-			if($user_check == 'exists')
-			{
-				$this->db->where('member_email',$user->email);
-				$q = $this->db->get('members');
-				$r = $q->row();
-				$data = array(
-			                 'username'  => $r->member_username,
-											 'logged_in'  => TRUE,
-												'id' => $r->id
-											  );
-					$this->session->set_userdata($data);
-			}
-			else {
-				//print_r($user);
-				//$this->Main_model->register_user($cookie['uid'],$user->email,$user->name,$user->username);
-				//$url = site_url('index.php/main/signup');
-				//redirect($url);					
-			}		*/
-		?><!--
-		Your userid is <?php //echo $cookie['uid'];?>
-	 	<fb:login-button autologoutlink="true" perms="email"></fb:login-button>
-    <?php //} //else { ?>
-      <fb:login-button autologoutlink="true" perms="email"></fb:login-button>
-    <?php //} ?>
-
-    <div id="fb-root"></div>-->
 	 <li><a href="<?php echo site_url('/main/index');?>">home</a></li>
 		 	<?php
 			if($this->session->userdata('logged_in') != TRUE)
@@ -128,19 +56,11 @@
 				<li><a href="<?php echo site_url('/admin');?>">Admin</a></li>
 				<?php
 				}
-				if($fbdata['user_id'] != "")
-				{
-				?>
-				<li><a href="#" onclick="FB.Connect.logout(function() { window.location='<?=site_url('member/logout')?>' }); return false;" >Logout</a></li>
-				<?php
-			}
-			else {
 				?>
 				<li><a href="<?=site_url('member/logout')?>">Logout</a></li>
 				
 			<?php
 					}
-				}
 			?>
 			<li>
 <form method="post" action="<?php echo site_url('gig/search');?>">
