@@ -6,6 +6,10 @@ class Gig extends Controller {
 	{
 		parent::Controller();
 		$this->load->model('Gig_model');
+		if($this->session->userdata('logged_in') != TRUE)
+		{
+			redirect('beta/');
+		}
 		//$this->output->enable_profiler(TRUE);	
 	}
 	
