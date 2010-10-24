@@ -34,18 +34,15 @@ body
 
 #wrapper
 {
-width:100%;	
+	margin:0 auto;
+	padding: 50px 20% 0;
 }
 
 #logo {
 	padding:15px;
-	border:2px solid #b74f8f;
-	margin-top:10%;
-	margin-left:40%;
 }
 #message {
-	font-weight:normal;margin-top:10px;	margin-left:40%;line-height:155%;
-	
+	line-height:155%;	
 }
 #form {
 	padding:10px;
