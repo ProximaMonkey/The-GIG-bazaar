@@ -50,6 +50,7 @@ width:100%;
 #form {
 	padding:10px;
 	border:1px solid #333;
+	margin-top:10px;
 }
 #code {
 	padding:10px;
@@ -65,6 +66,15 @@ font-size:15px;
 #error {
 	font-size:15px;color:red;
 }
+#hasaccount {
+	margin-top:15px;
+}
+#hasaccount span{
+	background:#333;color:#fff;padding:5px;
+}
+#hasaccount a {
+	color:#fff;
+}
 </style>
 </head>
 <body>
@@ -78,12 +88,14 @@ font-size:15px;
 </div>
 <div id='error'>
 <?php echo $this->session->flashdata('message');?>
-<div>
+</div>
 <div id='form'>
 	<form method='post' action="<?php echo site_url('beta/checkcode');?>">
 		Invite Code <input type='text' name='code' id='code'/>
 		<input type='submit' value='Let me in' id='button'>
 	</form>
+</div>
+<div id='hasaccount'><span><a href='<?php echo site_url('beta/login');?>'>I have a beta account</a></span></div>
 </div>
 </body>
 </html>
