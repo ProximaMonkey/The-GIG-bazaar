@@ -11,9 +11,9 @@
 
 			echo link_tag($link);
 			?>
-					<script type='text/javascript' src='<?php echo base_url();?>/js/jquery.js'></script>
-					<script type='text/javascript' src='<?php echo base_url();?>/js/gigbazaar.js'></script>
-					<script type="text/javascript" src='<?php echo base_url();?>/js/thickbox.js'></script>
+					<script type='text/javascript' src='<?php echo base_url();?>js/jquery.js'></script>
+					<script type='text/javascript' src='<?php echo base_url();?>js/gigbazaar.js'></script>
+					<script type="text/javascript" src='<?php echo base_url();?>js/thickbox.js'></script>
 					<link href="thickbox.css" rel="stylesheet" type=	"text/css" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title><?php echo $title;?></title>
