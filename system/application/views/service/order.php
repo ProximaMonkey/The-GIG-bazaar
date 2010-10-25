@@ -25,7 +25,7 @@ $('#paypal_form').submit();
 		<INPUT TYPE="hidden" NAME="return" value="<?php echo site_url('gig/placeorder/');?>/">
 			<INPUT TYPE="hidden" NAME="cancel_return" value="<?php echo site_url('gig/cancelled');?>">
 			<INPUT TYPE="hidden" NAME="currency_code" value="USD">
-				<input type="hidden" name="business" value="cybersuni@gmail.com">  
+				<input type="hidden" name="business" value="pranaynigotiya@hotmail.com">  
 				<input id="cmd" name="cmd" type="hidden" value="_xclick" />
 				<input type="hidden" name="rm" value="2">
 		<input type='submit' value='Redirecting to payment gateway...please wait'>
