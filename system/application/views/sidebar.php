@@ -4,12 +4,7 @@
 
 <div class="padding">
 
-<h2>The GIG Bazaar </h2>is a 
-place for blah blah blah 
-about us information is to 
-come here.No registration,
- pay by indian credit cards
- or bank accounts easily. 
+<h2>The GIG Bazaar </h2> is an online bazaar ( Marketplace ) where people can buy and sell things for Rs. 500.
 </div><!--padding ends-->
 
 <div class="sublinks">
