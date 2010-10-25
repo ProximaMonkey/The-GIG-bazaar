@@ -11,8 +11,7 @@
 |	http://example.com/
 |
 */
-$config['base_url']	= "http://localhost:8888/gitgigbazaar/The-GIG-bazaar/";
-
+$config['base_url']	= "http://www.thegigbazaar.com/";
 
 /*
 |--------------------------------------------------------------------------
