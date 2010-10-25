@@ -4,7 +4,7 @@
 
 <div class="padding">
 
-<h2>The GIG Bazaar </h2> is an online bazaar ( Marketplace ) where people can buy and sell things for Rs. 500.
+<h2 class="inline">The GIG Bazaar </h2> is an online bazaar ( Marketplace ) where people can buy and sell things for Rs. 500.
 </div><!--padding ends-->
 
 <div class="sublinks">

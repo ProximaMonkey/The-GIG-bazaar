@@ -294,6 +294,9 @@ h2
 	font-family:"Century Gothic" ,Georgia, "Times New Roman", Times, serif ;
 	font-size:18px;
 	color:#b74f8f;
+}
+
+h2.inline{
 	display:inline;
 }
 
