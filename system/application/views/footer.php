@@ -11,7 +11,6 @@
 	<div class="visa-img footerimg"></div><!--visa-img ends-->
 	
 </div>
-</div><!--Content-->
 </div><!--Wrapper-->
 
 
