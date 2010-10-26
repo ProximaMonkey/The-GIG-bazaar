@@ -11,6 +11,7 @@ class Common_model extends Model {
 		{
 			$categories = "";
 			//Get a list of all active category
+			$this->db->order_by('category_name','ASC');
 			$this->db->where('category_active','y');
 			$query = $this->db->get('category');
 			foreach($query->result() as $row)
