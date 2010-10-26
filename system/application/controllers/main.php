@@ -211,6 +211,42 @@ class Main extends Controller {
 		}
 		
 	}
+	function contactus()
+	{
+				$data['title'] = "Send Message";
+				$data['category'] = $this->Common_model->get_categories();
+				$data['unread'] = $this->Common_model->message_unreadcount();		
+				$this->load->view('header',$data);		
+				$this->load->view('contactus',$data);
+				$this->load->view('footer');
+			
+		
+	}
+	function sendcontact()
+	{
+		$email = $this->input->post('email');
+		$name = $this->input->post('name');
+		$message = $this->input->post('message');
+		
+			$date = date('Y-m-d');
+			
+				$this->load->library('email');
+				$config['mailtype'] = 'html';	
+				$this->email->initialize($config);
+				$this->email->from('support@thegigbazaar.com', 'thegigbazzar.com');
+				$this->email->to('pranaynigotiya@hotmail.com');
+
+				$this->email->subject('New contact us form submission : thegigbazzar.com');
+				$this->email->message('Hi, <br/><br/> You have a new message sent to you from <b>'.$name.'</b> user on thegigbazaar.com:<br/><br/>
+				'.$message.'
+				<br><br>The users email address is :'.$email.'<br/><br/>Automated mailing system');
+				$this->email->send();
+				$this->session->set_flashdata('message', '<div class="form-success">Message has been sent.</div>');
+				redirect('main/contactus/');
+		
+		
+		
+	}
 	function send_contact()
 	{
 		$to = $this->input->post('id');
