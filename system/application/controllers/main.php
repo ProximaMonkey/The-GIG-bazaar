@@ -233,11 +233,11 @@ class Main extends Controller {
 				$this->load->library('email');
 				$config['mailtype'] = 'html';	
 				$this->email->initialize($config);
-				$this->email->from('support@thegigbazaar.com', 'thegigbazzar.com');
+				$this->email->from('support@thegigbazaar.com', 'TheGIGbazaar.com');
 				$this->email->to('pranaynigotiya@hotmail.com');
 
-				$this->email->subject('New contact us form submission : thegigbazzar.com');
-				$this->email->message('Hi, <br/><br/> You have a new message sent to you from <b>'.$name.'</b> user on thegigbazaar.com:<br/><br/>
+				$this->email->subject('New contact us form submission : TheGIGbazaar.com');
+				$this->email->message('Hi, <br/><br/> You have a new message sent to you from <b>'.$name.'</b> user on The GIG bazaar:<br/><br/>
 				'.$message.'
 				<br><br>The users email address is :'.$email.'<br/><br/>Automated mailing system');
 				$this->email->send();
