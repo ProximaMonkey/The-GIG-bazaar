@@ -67,7 +67,7 @@
                    
                       <h3>Disputes </h3>
            
-                    <li>We encourage our buyers and sellers to resolve any issues between themselves. If for any reason this fails, you can <a href="<?php echo site_url('main/contact');?>">contact us here</a>.</li>
+                    <li>We encourage our buyers and sellers to resolve any issues between themselves. If for any reason this fails, you can <a href="<?php echo site_url('main/contactus');?>">contact us here</a>.</li>
                     <li>The GIG Bazaar will not refund buyers to bank accounts. Instead,   refunded funds will placed into the buyer's balance and will be made   available for future purchases on The GIG Bazaar.</li>
                 
            
