@@ -18,7 +18,7 @@
 
 <div id="categories">
 
-<h2 class="padding">Gig Categories</h2>
+<h2 class="padding">GIG Categories</h2>
 <ul>
 	<?php echo $category;?>
 
