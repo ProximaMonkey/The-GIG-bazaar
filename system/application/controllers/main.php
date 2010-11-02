@@ -439,7 +439,10 @@ class Main extends Controller {
 		
 	}
 	function privacypolicy(){
-		$this->load->view("privacy_policy");
+		$data['title'] = "TheGigBazaar | Privacy Policy";
+		$this->load->view('header',$data);
+		$this->load->view('privacypolicy');
+		$this->load->view('footer');
 	}
 }
 
