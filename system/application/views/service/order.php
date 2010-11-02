@@ -17,6 +17,19 @@ $('#paypal_form').submit();
 <div id="listing">
 		<h1 class="content_title">Order Gig - <?php echo $title;?> </h1><br/>
 	<b>You are being redirected to payment gateway</b>
+	<form action="https://www.moneybookers.com/app/payment.pl" method="post" target="_blank">
+	<input type="hidden" name="pay_to_email" value="h.sanat@gmail.com">
+	<input type="hidden" name="status_url" value="h.sanat@gmail.com"> 
+	<input type="hidden" name="return_url" value="<?php echo site_url('gig/placeorder/');?>/"> 
+	<input type="hidden" name="language" value="EN">
+	<input type="hidden" name="amount" value="<?php echo $final;?>">
+	<input type="hidden" name="currency" value="INR">
+	<input type="hidden" name="detail1_description" value="<?php echo $title;?>">
+	<input type="hidden" name="detail1_text" value="PRODUCT_DESCRIPTION_(EXAMPLE:Romeo and Juliet (W. Shakespeare))">
+	<input type="submit" value="Pay!">
+	</form>
+	<!--
+	
 	<form action="https://www.paypal.com/cgi-bin/webscr" id="paypal_form" method="post">
 		<input type='hidden' name='amount' value='<?php echo $final?>'>
 		<input type='hidden' name='item_name' value='<?php echo $title;?>'>
@@ -30,7 +43,7 @@ $('#paypal_form').submit();
 				<input type="hidden" name="rm" value="2">
 		<input type='submit' value='Redirecting to payment gateway...please wait'>
 	</form>	
-
+-->
 </div><!--listing ends-->
 
 </div><!--content ends-->
