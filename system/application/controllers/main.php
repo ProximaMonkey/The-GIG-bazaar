@@ -429,7 +429,7 @@ class Main extends Controller {
 		$this->email->cc('cybersunil03@hotmail.com');
 		$date1 = date('Y-m-d');
 		$this->email->subject('Thegigbazaar Backup');
-			$this->email->attach('../backup/thegigbazaar'.$date.'.zip');	
+		$this->email->attach('../backup/thegigbazaar'.$date.'.zip');	
 		$this->email->message('Backup for Date '.$date1);	
 		
 		$this->email->send();
@@ -438,10 +438,10 @@ class Main extends Controller {
 		echo $this->email->print_debugger();
 		
 	}
-	function privacypolicy(){
+	function privacy(){
 		$data['title'] = "TheGigBazaar | Privacy Policy";
 		$this->load->view('header',$data);
-		$this->load->view('privacypolicy');
+		$this->load->view('privacy_policy');
 		$this->load->view('footer');
 	}
 }
