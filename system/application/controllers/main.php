@@ -438,7 +438,9 @@ class Main extends Controller {
 		echo $this->email->print_debugger();
 		
 	}
-	
+	function privacypolicy(){
+		$this->load->view("privacy_policy");
+	}
 }
 
 /* End of file welcome.php */
